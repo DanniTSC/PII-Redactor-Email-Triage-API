@@ -1,0 +1,125 @@
+{
+  "num_samples": 12,
+  "json_validity": 1.0,
+  "category_accuracy": 1.0,
+  "pii_recall_by_type": {
+    "email": 1.0,
+    "phone": 1.0,
+    "iban": 1.0,
+    "cnp": 1.0,
+    "address": 1.0
+  },
+  "pii_recall_overall": 1.0,
+  "median_latency_ms": 0.09,
+  "rows": [
+    {
+      "label": "billing",
+      "pred": "billing",
+      "latency_ms": 0.51,
+      "redacted_text": "Hello, my invoice 123 is wrong. Please refund to IBAN [IBAN]. Call me at [PHONE].",
+      "summary": "my invoice 123 is wrong.",
+      "actions": [
+        {
+          "type": "create_ticket",
+          "params": {
+            "queue": "billing",
+            "priority": "normal"
+          }
+        },
+        {
+          "type": "request_refund_details",
+          "params": {
+            "required": [
+              "amount",
+              "currency"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "tech",
+      "pred": "tech",
+      "latency_ms": 0.08,
+      "redacted_text": "I get a login error on the dashboard. Please contact me at [EMAIL].",
+      "summary": "I get a login error on the dashboard.",
+      "actions": [
+        {
+          "type": "create_ticket",
+          "params": {
+            "queue": "tech",
+            "priority": "normal"
+          }
+        },
+        {
+          "type": "send_reset_instructions",
+          "params": {
+            "channel": "email"
+          }
+        },
+        {
+          "type": "request_debug_info",
+          "params": {
+            "fields": [
+              "timestamp",
+              "steps",
+              "screenshot"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "sales",
+      "pred": "sales",
+      "latency_ms": 0.06,
+      "redacted_text": "Do you have a discount or special offer? What's the price for the premium plan?",
+      "summary": "Do you have a discount or special offer?",
+      "actions": [
+        {
+          "type": "notify_team",
+          "params": {
+            "team": "sales"
+          }
+        },
+        {
+          "type": "propose_followup",
+          "params": {
+            "channel": "email"
+          }
+        }
+      ]
+    },
+    {
+      "label": "other",
+      "pred": "other",
+      "latency_ms": 0.05,
+      "redacted_text": "Thanks for the update, much appreciated.",
+      "summary": "Thanks for the update, much appreciated.",
+      "actions": [
+        {
+          "type": "route_to_human",
+          "params": {
+            "queue": "general"
+          }
+        }
+      ]
+    },
+    {
+      "label": "billing",
+      "pred": "billing",
+      "latency_ms": 5.47,
+      "redacted_text": "Am o plată dublă pe card la factura #221. Mă puteți suna la [PHONE]?",
+      "summary": "Am o plată dublă pe card la factura #221.",
+      "actions": [
+        {
+          "type": "create_ticket",
+          "params": {
+            "queue": "billing",
+            "priority": "normal"
+          }
+        }
+      ]
+    }
+  ]
+}

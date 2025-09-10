@@ -1,0 +1,12 @@
+{"text":"Hello, my invoice 123 is wrong. Please refund to IBAN RO49AAAA1B31007593840000. Call me at +40 721 123 456.","label":"billing","pii":["iban","phone"]}
+{"text":"I get a login error on the dashboard. Please contact me at john.doe@example.com.","label":"tech","pii":["email"]}
+{"text":"Do you have a discount or special offer? What's the price for the premium plan?","label":"sales","pii":[]}
+{"text":"Thanks for the update, much appreciated.","label":"other","pii":[]}
+{"text":"Am o plată dublă pe card la factura #221. Mă puteți suna la +40 722 555 444?","label":"billing","pii":["phone"]}
+{"text":"The app crashes when I open settings, it shows an error then closes.","label":"tech","pii":[]}
+{"text":"We are interested in a trial and an offer for 20 seats. Contact: sales@example.com","label":"sales","pii":["email"]}
+{"text":"Vreau ramburs către contul IBAN RO49AAAA1B31007593840000. Ne vedem pe Strada Aviatorilor nr. 10.","label":"billing","pii":["iban","address"]}
+{"text":"Password reset not working on mobile login.","label":"tech","pii":[]}
+{"text":"CNP-ul meu este 1980101123456, vreau doar să actualizez datele de client.","label":"other","pii":["cnp"]}
+{"text":"Transfer bancar pentru factura 778 prin IBAN RO49AAAA1B31007593840000.","label":"billing","pii":["iban"]}
+{"text":"We want to upgrade our subscription; what is the price? You can call at +40 733 111 222.","label":"sales","pii":["phone"]}
