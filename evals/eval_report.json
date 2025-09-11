@@ -10,12 +10,12 @@
     "address": 1.0
   },
   "pii_recall_overall": 1.0,
-  "median_latency_ms": 0.09,
+  "median_latency_ms": 0.03,
   "rows": [
     {
       "label": "billing",
       "pred": "billing",
-      "latency_ms": 0.51,
+      "latency_ms": 0.22,
       "redacted_text": "Hello, my invoice 123 is wrong. Please refund to IBAN [IBAN]. Call me at [PHONE].",
       "summary": "my invoice 123 is wrong.",
       "actions": [
@@ -40,7 +40,7 @@
     {
       "label": "tech",
       "pred": "tech",
-      "latency_ms": 0.08,
+      "latency_ms": 0.04,
       "redacted_text": "I get a login error on the dashboard. Please contact me at [EMAIL].",
       "summary": "I get a login error on the dashboard.",
       "actions": [
@@ -72,7 +72,7 @@
     {
       "label": "sales",
       "pred": "sales",
-      "latency_ms": 0.06,
+      "latency_ms": 0.03,
       "redacted_text": "Do you have a discount or special offer? What's the price for the premium plan?",
       "summary": "Do you have a discount or special offer?",
       "actions": [
@@ -93,7 +93,7 @@
     {
       "label": "other",
       "pred": "other",
-      "latency_ms": 0.05,
+      "latency_ms": 0.02,
       "redacted_text": "Thanks for the update, much appreciated.",
       "summary": "Thanks for the update, much appreciated.",
       "actions": [
@@ -108,7 +108,7 @@
     {
       "label": "billing",
       "pred": "billing",
-      "latency_ms": 5.47,
+      "latency_ms": 0.05,
       "redacted_text": "Am o plată dublă pe card la factura #221. Mă puteți suna la [PHONE]?",
       "summary": "Am o plată dublă pe card la factura #221.",
       "actions": [

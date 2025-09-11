@@ -12,10 +12,9 @@ app = FastAPI(
     description="Analyze user text → redact PII → classify → summarize → suggest actions.",
 )
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
 
+#api ul propriu zis 
+#primeste text intoarce un json cu Personal Identifiable Information, category, rezumat si actions 
 @app.post("/analyze", response_model=AnalyzeResponse, tags=["analyze"])
 def analyze(req: AnalyzeRequest, response: Response):
     """

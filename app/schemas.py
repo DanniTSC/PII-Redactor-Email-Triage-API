@@ -26,5 +26,8 @@ class AnalyzeResponse(BaseModel):
     summary: str
     actions: List[Action] = Field(default_factory=list)
 
+#contract, cum sa arate datele 
+#fast api foloseste clasele sa valideze json urile 
+
 
 

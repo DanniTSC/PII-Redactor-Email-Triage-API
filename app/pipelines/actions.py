@@ -1,10 +1,10 @@
 from __future__ import annotations
 from typing import List
-from app.schemas import Action
+from app.schemas import Action #action is the Pydantic model that gives the output as a JSON 
 
 def suggest_actions(category: str, text: str) -> List[Action]:
     """
-    Generează acțiuni deterministe pe baza categoriei + indicii din text.
+    Input: category and text, output list of actions that the system could do 
     Outputul trebuie să fie mereu JSON-valid conform Action.
     """
     t = (text or "").lower()
